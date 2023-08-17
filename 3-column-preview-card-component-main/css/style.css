@@ -13,6 +13,7 @@
   --dark-gray: #555;
   --black: #000;
 }
+
 * {
   padding: 0;
   margin: 0;
@@ -23,146 +24,135 @@ body {
   font-family: "Lexend Deca", serif;
   background-color: var(--neu-gray);
   font-size: 15px;
-  overflow: hidden;
   display: flex;
-  height: 100vh;
-  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  /*overflow: auto;*/
   color: var(--neu-white);
 }
-.container{
-    display: flex;
-    flex-direction:row;
-     align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  .card1{
-    max-width: 278px;
-    height: 450px;
-    padding: 42px;
-    position: relative;
-    background-color: var(--prim-orange); 
-    border-radius: 7px 0 0 7px;
-    padding: 2rem;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /*width: 100%;*/
+  border-radius: 7px;
+  overflow: hidden;
 }
-.card2{
-    max-width: 278px;
-    height: 450px;
-    padding: 42px;
-    position: relative;
-    background-color: var(--prim-cyan); 
-    padding: 2rem;
+
+.card {
+  max-width: 278px;
+  height: 450px;
+  padding: 42px;
+  position: relative;
+  padding: 2rem;
 }
-.card3{
-    max-width: 278px;
-    height: 450px;
-    padding: 42px;
-    position: relative;
-    background-color: var(--prim-dark-cyan); 
-    border-radius: 0 7px 7px 0;
-    padding: 2rem;
+
+.card:first-child {
+  background-color: var(--prim-orange);
 }
-  img {
-    margin-bottom: 36px;
-  }
-  
-  h2 {
-    font-family: "Big Shoulders Display", serif;
-    font-weight: 700;
-    font-size: 36px;
-    color:var(--neu-gray);  
-    margin-bottom: 1.5rem;
-  }
-  P{
-    font-family: "Lexend Deca", serif;
-    font-size: 13.8px;
-    line-height: 1.5rem;
-    color:var(--neu-white)  
-  }
-  
-  button {
-    position: absolute;
-    cursor: pointer;
-    text-align: center;
-    display: inline-block;
-    padding: 14px;
-    width: 146px;
-    border-radius: 25px;
-    outline: none;
-    border: 2px solid var(----neu-white);
-    font-family: inherit;
-    transition: all 0.2s ease-in-out;
-    bottom: 42px;
-  }
-.card1 button{
-    background: var(--neu-gray);
-    color: var(--prim-orange);
+
+.card:nth-child(2) {
+  background-color: var(--prim-cyan);
 }
-.card2 button{
-    background: var(--neu-gray);
-    color: var(--prim-cyan);
-  
+
+.card:last-child {
+  background-color: var(--prim-dark-cyan);
 }
-.card3 button{
-    background: var(--neu-gray);
-    color: var(--prim-dark-cyan);
-  
+
+img {
+  margin-bottom: 36px;
 }
-button:hover {
-  background-color: transparent;
+
+h2 {
+  font-family: "Big Shoulders Display", serif;
+  font-weight: 700;
+  font-size: 36px;
   color: var(--neu-gray);
+  margin-bottom: 1.5rem;
+}
+
+P {
+  font-family: "Lexend Deca", serif;
+  font-size: 13.8px;
+  line-height: 1.5rem;
+  color: var(--neu-white)
+}
+
+button {
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  padding: 14px;
+  width: 146px;
+  border-radius: 25px;
+  outline: none;
+  border: 2px solid var(----neu-white);
+  font-family: inherit;
+  transition: all 0.2s ease-in-out;
+  bottom: 42px;
+}
+
+.card:first-child button {
+  background: var(--neu-gray);
+  color: var(--prim-orange);
+}
+
+.card:nth-child(2) button {
+  background: var(--neu-gray);
+  color: var(--prim-cyan);
+
+}
+
+.card:last-child button {
+  background: var(--neu-gray);
+  color: var(--prim-dark-cyan);
+
+}
+
+button:hover {
+  background-color: transparent !important;
+  color: var(--neu-gray) !important;
   box-shadow: 0 0 0 2px var(--neu-white);
 }
 
 button:active {
   transform: scale(0.9);
 }
-  /* footer */
-.attribution {
-    width: 100%;
-    margin: 0 auto;
-    position: absolute;
-    color: var(--gray);
-    bottom: 10px;
-    font-size: 0.75rem;
-    line-height: 20px;
-    text-align: center;
-  }
-  
-  .attribution a {
-    text-decoration: none;
-    color: var(--dark-gray);
-  }
-  
-  .attribution a:hover {
-    color: var(--black);
-  }
-  
-  /* responsive desgin */
-  @media (max-width: 375px) {
-    body {
-      display: flex;
-      width: 100%;
-      overflow: scroll;
-      flex-wrap: wrap;
-    }
-  
-    .container {
-      padding: 50px 0;
-      flex-direction: column;
-    }
 
-    .card1 {
-      border-radius: 7px 7px 0 0;
-    }
-  
-    .card3 {
-      border-radius: 0 0 7px 7px;
-    }
-    .attribution {
-      position: relative;
-      width: auto;
-      padding-bottom: 10px;
-    }
-  
+/* footer */
+.attribution {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  color: var(--gray);
+  bottom: 10px;
+  font-size: 0.75rem;
+  line-height: 20px;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--dark-gray);
+}
+
+.attribution a:hover {
+  color: var(--black);
+}
+
+/* responsive desgin */
+@media (max-width: 375px) {
+
+  .attribution {
+    position: relative;
+    width: auto;
+    padding-bottom: 10px;
+  }
+
 }
