@@ -1,4 +1,3 @@
-# project
 # Frontend Mentor Projects
 
 This repository contains solutions for three Frontend Mentor challenges implemented using HTML and CSS.
